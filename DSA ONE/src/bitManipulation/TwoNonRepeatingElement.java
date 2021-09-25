@@ -14,16 +14,18 @@ public class TwoNonRepeatingElement {
 		sum = sum^ar[i];
 		}
 		
-		sum = sum&(-sum);
+//		sum = sum&(-sum); 
+		sum = sum&(-(sum-1));                        // another method
 		
 		for(int i=0;i<ar.length;i++) {
-		if((ar[i]&sum)>0) {
+		if((ar[i]&sum)>0) {                          //(ar[i]&sum)!=0;
 		   sum1 = sum1^ar[i];
 		}else {
 			sum2 = sum2^ar[i];
 		}	
 		}
 		System.out.println("the two non repeating numbers are " +sum1+" " + sum2);
+		
 		
 		
 	}

@@ -36,7 +36,7 @@ public class ModuloArithmetics{
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		int n = sc.nextInt();
-		fastPower(a,b,n);
+		fastPower(a,b);
 	}
 
 }
