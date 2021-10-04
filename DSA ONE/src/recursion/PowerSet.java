@@ -4,26 +4,24 @@ import java.util.Scanner;
 
 public class PowerSet {
 
-	static void powerSet(String s,int index,String cur) {
+	static void powerSet(String s,int i,String cur) {
 		
 		int n =s.length();
 		
-		if(index == n) {
+		if(i == n) {
+			System.out.print(cur+" ");
 			return;
 		}
-		System.out.print(cur+" ");
+		
+		
+	powerSet(s,i+1,cur);
+		powerSet(s,i+1,cur+s.charAt(i));
 		 
-		for(int  i = index+1; i<n; i++) {
-			cur+= s.charAt(i);
-			powerSet(s,i,cur);
-			
-			cur = cur.substring(0, cur.length()-1);
-			
-		}
+
 	}
 	public static void main(String[] args) {
 		String s = "sbc";
-		int index = -1;
+		int index = 0;
 		String cur = "";
 		powerSet(s,index,cur);
 	}
