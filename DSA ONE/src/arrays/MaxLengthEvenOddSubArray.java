@@ -27,7 +27,7 @@ public class MaxLengthEvenOddSubArray {
 		for(int i=1;i<n;i++) {
 			if((arr[i]%2==0 && (arr[i-1]%2)!=0)||(arr[i]%2!=0 && arr[i-1]%2==0)) {
 				curr++;
-				res = Math.max(res, curr);
+				res = Math.max(res, curr);                                 //Efficent Approach
 			}else
 				curr =1;
 		}
