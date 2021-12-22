@@ -13,6 +13,7 @@ public class BinarySearch{
 		else
 			return bSearch(arr,mid+1,high,x);
 	}
+	
 	public static void main(String[] args) {
 		int arr[] = {10,20,30,40,50,70};
 		int n =arr.length;
